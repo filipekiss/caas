@@ -61,6 +61,20 @@ class CreditcardHelper
     return $result;
   }
   
+  public function getList()
+  {
+    $list = new Collection();
+    $flags = $this->cards->keys();
+    foreach($flags as $flag) {
+      $list->push($flag);
+      $aliases = $this->aliases->get($flag);
+      if ($aliases) {
+        $list = $list->merge($aliases);
+      }
+    }
+    return $list->toJson();
+  }
+  
   public function getJson($alias) {
     $cardResponse = $this->getCard($alias);
     if ($cardResponse->get('status') === '404') {

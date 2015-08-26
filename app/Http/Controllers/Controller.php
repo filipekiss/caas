@@ -36,4 +36,9 @@ class Controller extends BaseController
     {
       return $this->creditcard->getJson($flag);
     }
+
+    public function listCreditCardFlags()
+    {
+      return $this->creditcard->getList();
+    }
 }

@@ -115,6 +115,7 @@ $app->get('/cpf/{formatted}', 'Controller@generateCpf');
 $app->get('/cnpj', 'Controller@generateCnpj');
 $app->get('/cnpj/{formatted}', 'Controller@generateCnpj');
 $app->get('/cc', 'Controller@generateCreditCard');
+$app->get('/cc/list', 'Controller@listCreditCardFlags');
 $app->get('/cc/json/', 'Controller@generateCreditCardJson');
 $app->get('/cc/{flag}', 'Controller@generateCreditCard');
 $app->get('/cc/json/{flag}', 'Controller@generateCreditCardJson');
