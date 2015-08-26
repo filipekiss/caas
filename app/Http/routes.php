@@ -110,7 +110,11 @@ $app->get('/', function () use ($app) {
       ";
 });
 
-$app->get('/cpf/', 'Controller@generateCpf');
+$app->get('/cpf', 'Controller@generateCpf');
 $app->get('/cpf/{formatted}', 'Controller@generateCpf');
 $app->get('/cnpj', 'Controller@generateCnpj');
 $app->get('/cnpj/{formatted}', 'Controller@generateCnpj');
+$app->get('/cc', 'Controller@generateCreditCard');
+$app->get('/cc/json/', 'Controller@generateCreditCardJson');
+$app->get('/cc/{flag}', 'Controller@generateCreditCard');
+$app->get('/cc/json/{flag}', 'Controller@generateCreditCardJson');
