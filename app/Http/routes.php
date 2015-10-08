@@ -110,6 +110,7 @@ $app->get('/', function () use ($app) {
       ";
 });
 
+$app->get('/ip', 'Controller@getIp');
 $app->get('/cpf', 'Controller@generateCpf');
 $app->get('/cpf/{formatted}', 'Controller@generateCpf');
 $app->get('/cnpj', 'Controller@generateCnpj');

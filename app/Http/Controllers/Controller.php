@@ -41,4 +41,9 @@ class Controller extends BaseController
     {
       return $this->creditcard->getList();
     }
+    
+    public function getIp()
+    {
+      return $_SERVER['REMOTE_ADDR'];
+    }
 }
