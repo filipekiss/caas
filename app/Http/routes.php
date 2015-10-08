@@ -17,7 +17,7 @@ $app->get('/info', function () use ($app) {
 
 $app->get('/', function () use ($app) {
     if (stristr($_SERVER['HTTP_USER_AGENT'], "curl")) {
-      return 'Hey! Please, try using /cpf or /cnpj endpoints. :)';
+      return $_SERVER['REMOTE_ADDR'];
     }
     return "<!DOCTYPE html>
           <html>
