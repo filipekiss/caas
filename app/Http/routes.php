@@ -95,13 +95,19 @@ $app->get('/', function () use ($app) {
                         <code>$ 20361743000102</code>
                       </p>
                       <p>
-                        Add a second parameter to receive it formatted (IP address are always formatted)
+                        Add a second parameter to receive it formatted (IP Addresses are always formatted)
                       </p>
                       <p>
                         <code>
                           curl http://d.beij.in/cpf/s
                         </code>
                         <code>$ 582.578.136-64</code>
+                      </p>
+                      <p>
+                        <code>
+                          http://d.beij.in/cnpj/s
+                        </code>
+                        <code>$ 42.177.679/0001-39</code>
                       </p>
                   </div>
               </div>
@@ -111,6 +117,7 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/ip', 'Controller@getIp');
+$app->get('/ip/{whatever}', 'Controller@getIp');
 $app->get('/cpf', 'Controller@generateCpf');
 $app->get('/cpf/{formatted}', 'Controller@generateCpf');
 $app->get('/cnpj', 'Controller@generateCnpj');
