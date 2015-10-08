@@ -32,7 +32,7 @@ $app->get('/', function () use ($app) {
                       padding: 0;
                       width: 100%;
                       height: 100%;
-                      color: #B0BEC5;
+                      color: #2e2e2e;
                       display: table;
                       font-weight: 100;
                       font-family: 'Lato';
@@ -72,13 +72,19 @@ $app->get('/', function () use ($app) {
               <div class=\"container\">
                   <div class=\"content\">
                       <div class=\"title\">
-                        CPF as a Service
+                        Stuff as a Service
                       </div>
                       <div class=\"quote\">
-                        Easy document numbers for testing applications.
+                        Easy document numbers for testing applications and other stuff.
                       </div>
                       <p>
                         Endpoints available:
+                      </p>
+                      <p>
+                        <code>
+                          http://d.beij.in/ip
+                        </code>
+                        <code>$ 192.168.0.1</code>
                       </p>
                       <p>
                         <code>curl http://d.beij.in/cpf</code>
@@ -89,19 +95,13 @@ $app->get('/', function () use ($app) {
                         <code>$ 20361743000102</code>
                       </p>
                       <p>
-                        Add a second parameter to receive it formatted
+                        Add a second parameter to receive it formatted (IP address are always formatted)
                       </p>
                       <p>
                         <code>
                           curl http://d.beij.in/cpf/s
                         </code>
                         <code>$ 582.578.136-64</code>
-                      </p>
-                      <p>
-                        <code>
-                          http://d.beij.in/cnpj/s
-                        </code>
-                        <code>$ 42.177.679/0001-39</code>
                       </p>
                   </div>
               </div>
